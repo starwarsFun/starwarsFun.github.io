@@ -22,8 +22,6 @@ let name = document.querySelectorAll("#named");
             crossDomain: true,
             success: function(data) {
                 for(var i = 0; i < data.results.length; i++){
-                    // console.log(data);
-                    // console.log(birthYear[i]);
                     name[i].innerHTML = data.results[i].name;
                     birthYear[i].innerHTML = data.results[i].birth_year;
                     gender[i].innerHTML = data.results[i].gender;
