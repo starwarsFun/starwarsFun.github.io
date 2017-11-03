@@ -1,0 +1,155 @@
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    padding: 0;
+}
+li{
+    /*display: inline-block;*/
+    margin: 10px;
+    text-align: center;
+}
+h3, p{
+    color:#fee91a;
+}
+.preloader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: 2s all;
+    animation-name: transl;
+    animation-delay: 2s;
+}
+
+@keyframes transl {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+
+.preloader.hide{
+    transform: translateX(-100%);
+}
+.intro{
+    color: #15b2ef;
+    position: absolute;
+    top: 50%;
+    letter-spacing: 1px;
+    left: 50%;
+    font-size: 21px;
+    font-size: 200%;
+    font-weight: 500;
+     opacity: 0;
+    margin-left: -220px;
+    margin-top: -40px;
+    animation: showIntro 5s ease-out 1s forwards;
+    -webkit-animation: showIntro 5s ease-out 1s forwards;
+}
+
+@keyframes showIntro {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.inner-body img{
+    transform: scale(3);
+    animation-name: logo;
+    animation-duration: 8s;
+    visibility: hidden;
+    animation-delay:7s;
+}
+
+@keyframes logo {
+    0% {
+        transform: scale(3);
+        visibility: visible;
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.made-by{
+    margin: 0 0 0 -12.325em;
+    top: auto;
+    bottom: 0;
+    height: 50em;
+    font-size: 350%;
+    text-align: justify;
+    overflow: hidden;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: perspective(300px) rotateX(25deg);
+    transform: perspective(300px) rotateX(25deg);
+    position: absolute;
+    left: 50%;
+}
+
+.inner-text{
+    font-size: 200%;
+    color: #fee91a;
+    left: 50%;
+    margin: 26em 30px -13.5em 4px;
+    line-height: 1.35em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    visibility: hidden;
+    animation-name: InnerText;
+    animation-duration: 14s;
+    animation-delay: 15s;
+}
+
+@keyframes InnerText {
+    0% {
+        margin: 26em 30px -13.5em 4px;
+        visibility: visible;
+    }
+    100% {
+        margin: 0em 30px -13.5em 4px;
+    }
+}
+
+.header{
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.header img{
+    height: 100%;
+}
+.pers-img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+#named:before{
+    color: #fff;
+    content: "Name: ";
+}
+#birthYear:before{
+    color: #fff;
+    content: "Birthday: ";
+}
+#gender:before{
+    color: #fff;
+    content: "Gender: ";
+}
+#height:before{
+    color: #fff;
+    content: "Height: ";
+}
