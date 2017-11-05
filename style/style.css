@@ -47,7 +47,7 @@ h3, p{
     font-size: 21px;
     font-size: 200%;
     font-weight: 500;
-     opacity: 0;
+    opacity: 0;
     margin-left: -220px;
     margin-top: -40px;
     animation: showIntro 5s ease-out 1s forwards;
@@ -155,4 +155,24 @@ h3, p{
 #height:before{
     color: #fff;
     content: "Height: ";
+}
+
+/*Mobile*/
+
+@media screen and (max-width: 414px){
+    .intro{
+        width: 100%;
+        margin-left: -158px;
+        font-size: 140%;
+    }
+    .header{
+        height: 180px;
+    }
+    .inner-body img{
+        width: 100%;
+        margin-top: 40%;
+    }
+    .made-by{
+        margin: 0 0 0 -5.325em;
+    }
 }
